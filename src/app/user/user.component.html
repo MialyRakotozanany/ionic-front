@@ -1,0 +1,11 @@
+<ion-item *ngIf="user" [detail]="false">
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{ user.lastname }}
+    </h2>
+    <h3>{{ user.firstname }}</h3>
+  </ion-label>
+  <ion-button (click)="changeStatus(user.id)">{{
+    user.status == 1 ? "Désactivé " : "Activé"
+  }}</ion-button>
+</ion-item>
